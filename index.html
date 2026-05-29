@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URCPP 2026 MB Lab Data Sheet</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e3a5f, #111827);
+      color: #111827;
+    }
+    .page {
+      min-height: 100vh;
+      padding: 34px 16px;
+      display: flex;
+      justify-content: center;
+    }
+    .card {
+      width: 100%;
+      max-width: 1050px;
+      background: #fff;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 25px 80px rgba(0,0,0,0.35);
+    }
+    .hero {
+      background: linear-gradient(135deg, #facc15, #fb923c);
+      padding: 32px;
+      text-align: center;
+    }
+    h1 { margin: 0; font-size: 34px; font-weight: 900; }
+    .content { padding: 30px; }
+    .section {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 2px solid #e5e7eb;
+    }
+    h2 { margin: 0 0 14px; font-size: 24px; }
+    h3 { margin-top: 22px; }
+    label {
+      display: block;
+      font-weight: 800;
+      margin: 14px 0 6px;
+    }
+    input, select {
+      width: 100%;
+      padding: 11px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 8px;
+      text-align: left;
+    }
+    th { background: #f3f4f6; }
+    td input { border-radius: 8px; }
+    .note {
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.45;
+    }
+    button {
+      width: 100%;
+      margin-top: 30px;
+      padding: 16px;
+      border: none;
+      border-radius: 14px;
+      background: #111827;
+      color: white;
+      font-size: 18px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    button:hover { background: #374151; }
+    @media (max-width: 760px) {
+      .grid, .grid-3 { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+      .content { padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+<main class="page">
+<section class="card">
+  <header class="hero">
+    <h1>2026 URCPP Mind Body Lab Data Sheet</h1>
+    <p><strong>Digital Lab Entry Form</strong></p>
+  </header>
+
+  <section class="content" id="mainContent">
+    <form id="labForm">
+      <input type="hidden" id="submit_time" name="lab_form_submit_time" />
+
+      <div class="section">
+        <h2>Participant Information</h2>
+        <div class="grid">
+          <div>
+            <label>Participant Code</label>
+            <input type="text" name="Participant_Code" placeholder="MB___" required />
+          </div>
+          <div>
+            <label>Testing Date</label>
+            <input type="date" name="Testing_Date" required />
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Anthropometrics</h2>
+        <div class="grid">
+          <div><label>Age</label><input type="number" name="Age" step="1" /></div>
+          <div><label>Birthdate</label><input type="date" name="Birthdate" /></div>
+          <div><label>Sex</label><input type="text" name="Sex" /></div>
+          <div><label>Race / Ethnicity</label><input type="text" name="Race_Ethnicity" /></div>
+          <div><label>Height (cm)</label><input type="number" name="Height_cm" step="0.01" /></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Tanita</h2>
+        <div class="grid">
+          <div>
+            <label>Tanita Mode</label>
+            <select name="Tanita_Mode">
+              <option value="">Select</option>
+              <option>Standard</option>
+              <option>Athletic</option>
+            </select>
+          </div>
+          <div><label>Weight (kg)</label><input type="number" name="Tanita_Weight_kg" step="0.01" /></div>
+          <div><label>Fat (%)</label><input type="number" name="Tanita_Fat_Percent" step="0.01" /></div>
+          <div><label>BMI</label><input type="number" name="Tanita_BMI" step="0.01" /></div>
+          <div><label>Total Body Water (kg)</label><input type="number" name="Tanita_Total_Body_Water_kg" step="0.01" /></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>SOZO</h2>
+        <div class="grid">
+          <div><label>Fat (%)</label><input type="number" name="SOZO_Fat_Percent" step="0.01" /></div>
+          <div><label>Total Body Water (kg)</label><input type="number" name="SOZO_Total_Body_Water_kg" step="0.01" /></div>
+          <div><label>ICF</label><input type="number" name="SOZO_ICF" step="0.01" /></div>
+          <div><label>ECF</label><input type="number" name="SOZO_ECF" step="0.01" /></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Handgrip</h2>
+        <div class="grid">
+          <div><label>Trial 1 (kg)</label><input type="number" name="Handgrip_Trial_1_kg" step="0.01" /></div>
+          <div><label>Trial 2 (kg)</label><input type="number" name="Handgrip_Trial_2_kg" step="0.01" /></div>
+          <div><label>Trial 3 (kg)</label><input type="number" name="Handgrip_Trial_3_kg" step="0.01" /></div>
+          <div>
+            <label>Hand Dominance</label>
+            <select name="Hand_Dominance">
+              <option value="">Select</option>
+              <option>Right</option>
+              <option>Left</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>BESS</h2>
+        <div class="grid">
+          <div>
+            <label>Non-dominant Foot</label>
+            <select name="BESS_Non_Dominant_Foot">
+              <option value="">Select</option>
+              <option>Right</option>
+              <option>Left</option>
+            </select>
+          </div>
+          <div><label>Double Leg Stance Errors</label><input type="number" name="BESS_Double_Leg_Errors" step="1" /></div>
+          <div><label>Single Leg Stance Errors</label><input type="number" name="BESS_Single_Leg_Errors" step="1" /></div>
+          <div><label>Tandem Stance Errors</label><input type="number" name="BESS_Tandem_Stance_Errors" step="1" /></div>
+          <div><label>Total BESS Score</label><input type="number" name="BESS_Total_Score" step="1" /></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Free Squat Assessment</h2>
+        <table>
+          <tr><th>Variable</th><th>Trial 1</th><th>Trial 2</th><th>Trial 3</th></tr>
+          <tr><td>Peak Force</td><td><input name="FreeSquat_PeakForce_T1" type="number" step="0.01"></td><td><input name="FreeSquat_PeakForce_T2" type="number" step="0.01"></td><td><input name="FreeSquat_PeakForce_T3" type="number" step="0.01"></td></tr>
+          <tr><td>Asymmetry (L = -, R = +)</td><td><input name="FreeSquat_Asymmetry_T1" type="number" step="0.01"></td><td><input name="FreeSquat_Asymmetry_T2" type="number" step="0.01"></td><td><input name="FreeSquat_Asymmetry_T3" type="number" step="0.01"></td></tr>
+          <tr><td>Max Negative Displacement</td><td><input name="FreeSquat_MaxNegDisp_T1" type="number" step="0.01"></td><td><input name="FreeSquat_MaxNegDisp_T2" type="number" step="0.01"></td><td><input name="FreeSquat_MaxNegDisp_T3" type="number" step="0.01"></td></tr>
+          <tr><td>Concentric Peak Power / BM</td><td><input name="FreeSquat_ConPeakPowerBM_T1" type="number" step="0.01"></td><td><input name="FreeSquat_ConPeakPowerBM_T2" type="number" step="0.01"></td><td><input name="FreeSquat_ConPeakPowerBM_T3" type="number" step="0.01"></td></tr>
+        </table>
+        <label>RPE</label><input type="number" name="FreeSquat_RPE" min="0" max="10" step="0.1" />
+      </div>
+
+      <div class="section">
+        <h2>Squat to Bench Assessment</h2>
+        <table>
+          <tr><th>Variable</th><th>Trial 1</th><th>Trial 2</th><th>Trial 3</th></tr>
+          <tr><td>Peak Force</td><td><input name="SquatBench_PeakForce_T1" type="number" step="0.01"></td><td><input name="SquatBench_PeakForce_T2" type="number" step="0.01"></td><td><input name="SquatBench_PeakForce_T3" type="number" step="0.01"></td></tr>
+          <tr><td>Asymmetry</td><td><input name="SquatBench_Asymmetry_T1" type="number" step="0.01"></td><td><input name="SquatBench_Asymmetry_T2" type="number" step="0.01"></td><td><input name="SquatBench_Asymmetry_T3" type="number" step="0.01"></td></tr>
+          <tr><td>Max Negative Displacement</td><td><input name="SquatBench_MaxNegDisp_T1" type="number" step="0.01"></td><td><input name="SquatBench_MaxNegDisp_T2" type="number" step="0.01"></td><td><input name="SquatBench_MaxNegDisp_T3" type="number" step="0.01"></td></tr>
+          <tr><td>Concentric Peak Power / BM</td><td><input name="SquatBench_ConPeakPowerBM_T1" type="number" step="0.01"></td><td><input name="SquatBench_ConPeakPowerBM_T2" type="number" step="0.01"></td><td><input name="SquatBench_ConPeakPowerBM_T3" type="number" step="0.01"></td></tr>
+        </table>
+        <label>RPE</label><input type="number" name="SquatBench_RPE" min="0" max="10" step="0.1" />
+      </div>
+
+      <div class="section">
+        <h2>Vertical Jump</h2>
+        <table>
+          <tr><th>Variable</th><th>Trial 1</th><th>Trial 2</th><th>Trial 3</th></tr>
+          <tr><td>Jump Height</td><td><input name="VJ_JumpHeight_T1" type="number" step="0.01"></td><td><input name="VJ_JumpHeight_T2" type="number" step="0.01"></td><td><input name="VJ_JumpHeight_T3" type="number" step="0.01"></td></tr>
+          <tr><td>Peak Landing Force</td><td><input name="VJ_PeakLandingForce_T1" type="number" step="0.01"></td><td><input name="VJ_PeakLandingForce_T2" type="number" step="0.01"></td><td><input name="VJ_PeakLandingForce_T3" type="number" step="0.01"></td></tr>
+          <tr><td>Asymmetry (L = -, R = +)</td><td><input name="VJ_Asymmetry_T1" type="number" step="0.01"></td><td><input name="VJ_Asymmetry_T2" type="number" step="0.01"></td><td><input name="VJ_Asymmetry_T3" type="number" step="0.01"></td></tr>
+          <tr><td>Peak Power / BM</td><td><input name="VJ_PeakPowerBM_T1" type="number" step="0.01"></td><td><input name="VJ_PeakPowerBM_T2" type="number" step="0.01"></td><td><input name="VJ_PeakPowerBM_T3" type="number" step="0.01"></td></tr>
+          <tr><td>RSI-modified</td><td><input name="VJ_RSIMod_T1" type="number" step="0.01"></td><td><input name="VJ_RSIMod_T2" type="number" step="0.01"></td><td><input name="VJ_RSIMod_T3" type="number" step="0.01"></td></tr>
+        </table>
+        <label>RPE</label><input type="number" name="VerticalJump_RPE" min="0" max="10" step="0.1" />
+      </div>
+
+      <div class="section">
+        <h2>IMTP</h2>
+        <label>Setting</label>
+        <input type="text" name="IMTP_Setting" />
+
+        <table>
+          <tr><th>Variable</th><th>Trial 1</th><th>Trial 2</th><th>Trial 3</th></tr>
+          <tr><td>Peak Vertical Force</td><td><input name="IMTP_PeakVForce_T1" type="number" step="0.01"></td><td><input name="IMTP_PeakVForce_T2" type="number" step="0.01"></td><td><input name="IMTP_PeakVForce_T3" type="number" step="0.01"></td></tr>
+          <tr><td>Peak V Force / BM</td><td><input name="IMTP_PeakVForceBM_T1" type="number" step="0.01"></td><td><input name="IMTP_PeakVForceBM_T2" type="number" step="0.01"></td><td><input name="IMTP_PeakVForceBM_T3" type="number" step="0.01"></td></tr>
+          <tr><td>Peak V Force Asymmetry</td><td><input name="IMTP_PeakVForceAsym_T1" type="number" step="0.01"></td><td><input name="IMTP_PeakVForceAsym_T2" type="number" step="0.01"></td><td><input name="IMTP_PeakVForceAsym_T3" type="number" step="0.01"></td></tr>
+          <tr><td>RFD - 100ms</td><td><input name="IMTP_RFD100_T1" type="number" step="0.01"></td><td><input name="IMTP_RFD100_T2" type="number" step="0.01"></td><td><input name="IMTP_RFD100_T3" type="number" step="0.01"></td></tr>
+          <tr><td>RFD - 200ms</td><td><input name="IMTP_RFD200_T1" type="number" step="0.01"></td><td><input name="IMTP_RFD200_T2" type="number" step="0.01"></td><td><input name="IMTP_RFD200_T3" type="number" step="0.01"></td></tr>
+        </table>
+        <label>RPE</label><input type="number" name="IMTP_RPE" min="0" max="10" step="0.1" />
+      </div>
+
+      <button type="submit">Submit Lab Data</button>
+    </form>
+  </section>
+</section>
+</main>
+
+<script>
+  const FORM_ENDPOINT = "https://formspree.io/f/xkoeevqb";
+
+  document.getElementById("labForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    document.getElementById("submit_time").value = new Date().toISOString();
+
+    const formData = new FormData(this);
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (!response.ok) throw new Error("Submission failed");
+
+      document.getElementById("mainContent").innerHTML = `
+        <div class="section">
+          <h2>Lab Data Submitted Successfully</h2>
+          <p>Participant lab data have been submitted.</p>
+        </div>
+      `;
+    } catch (error) {
+      alert("There was a problem submitting the lab data. Please try again.");
+    }
+  });
+</script>
+</body>
+</html>
