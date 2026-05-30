@@ -295,58 +295,118 @@
   </div>
 </div>
       <div class="section">
-        <h2>Handgrip</h2>
-        <div class="grid">
-          <div><label>Trial 1 (kg)</label><input type="number" name="Handgrip_Trial_1_kg" step="0.01" /></div>
-          <div><label>Trial 2 (kg)</label><input type="number" name="Handgrip_Trial_2_kg" step="0.01" /></div>
-          <div><label>Trial 3 (kg)</label><input type="number" name="Handgrip_Trial_3_kg" step="0.01" /></div>
-          <div>
-  <label>Hand Dominance</label>
+  <h2>Handgrip</h2>
 
-  <div style="display:flex; gap:24px; margin-top:10px;">
-    <label style="display:flex; align-items:center; gap:8px; font-weight:600;">
-      <input
-        type="radio"
-        name="Hand_Dominance"
-        value="Right"
-        required
-        style="width:auto;"
-      />
-      Right
-    </label>
+  <div style="max-width: 420px;">
 
-    <label style="display:flex; align-items:center; gap:8px; font-weight:600;">
-      <input
-        type="radio"
-        name="Hand_Dominance"
-        value="Left"
-        style="width:auto;"
-      />
-      Left
-    </label>
+    <label>Trial 1 (kg)</label>
+    <input
+      type="number"
+      name="Handgrip_Trial_1_kg"
+      step="0.01"
+    />
+
+    <label>Trial 2 (kg)</label>
+    <input
+      type="number"
+      name="Handgrip_Trial_2_kg"
+      step="0.01"
+    />
+
+    <label>Trial 3 (kg)</label>
+    <input
+      type="number"
+      name="Handgrip_Trial_3_kg"
+      step="0.01"
+    />
+
+    <label>Hand Dominance</label>
+
+    <div style="display:flex; gap:24px; margin-top:10px;">
+      <label style="display:flex; align-items:center; gap:8px; font-weight:600;">
+        <input
+          type="radio"
+          name="Hand_Dominance"
+          value="Right"
+          required
+          style="width:auto;"
+        />
+        Right
+      </label>
+
+      <label style="display:flex; align-items:center; gap:8px; font-weight:600;">
+        <input
+          type="radio"
+          name="Hand_Dominance"
+          value="Left"
+          style="width:auto;"
+        />
+        Left
+      </label>
+    </div>
+
   </div>
 </div>
-        </div>
-      </div>
+     <div class="section">
+  <h2>BESS</h2>
 
-      <div class="section">
-        <h2>BESS</h2>
-        <div class="grid">
-          <div>
-            <label>Testing Foot (Non-dominance) </label>
-            <select name="BESS_Non_Dominant_Foot">
-              <option value="">Select</option>
-              <option>Right</option>
-              <option>Left</option>
-            </select>
-          </div>
-          <div><label>Double Leg Stance Errors</label><input type="number" name="BESS_Double_Leg_Errors" step="1" /></div>
-          <div><label>Single Leg Stance Errors</label><input type="number" name="BESS_Single_Leg_Errors" step="1" /></div>
-          <div><label>Tandem Stance Errors</label><input type="number" name="BESS_Tandem_Stance_Errors" step="1" /></div>
-          <div><label>Total BESS Score</label><input type="number" name="BESS_Total_Score" step="1" /></div>
-        </div>
-      </div>
+  <div style="max-width: 420px;">
 
+    <label>Testing Foot (Non-dominance)</label>
+
+    <div style="display:flex; gap:24px; margin-top:10px; margin-bottom:18px;">
+      <label style="display:flex; align-items:center; gap:8px; font-weight:600;">
+        <input
+          type="radio"
+          name="BESS_Non_Dominant_Foot"
+          value="Right"
+          required
+          style="width:auto;"
+        />
+        Right
+      </label>
+
+      <label style="display:flex; align-items:center; gap:8px; font-weight:600;">
+        <input
+          type="radio"
+          name="BESS_Non_Dominant_Foot"
+          value="Left"
+          style="width:auto;"
+        />
+        Left
+      </label>
+    </div>
+
+    <label>Double Leg Stance Errors</label>
+    <input
+      type="number"
+      name="BESS_Double_Leg_Errors"
+      step="1"
+    />
+
+    <label>Single Leg Stance Errors</label>
+    <input
+      type="number"
+      name="BESS_Single_Leg_Errors"
+      step="1"
+    />
+
+    <label>Tandem Stance Errors</label>
+    <input
+      type="number"
+      name="BESS_Tandem_Stance_Errors"
+      step="1"
+    />
+
+    <label>Total BESS Score</label>
+    <input
+      type="number"
+      name="BESS_Total_Score"
+      step="1"
+    />
+
+  </div>
+</div>
       <div class="section">
         <h2>Free Squat Assessment</h2>
         <table>
