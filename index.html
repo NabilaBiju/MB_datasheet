@@ -163,12 +163,22 @@
       name="Birthdate"
     />
 
-    <label>Sex</label>
-    <input
-      type="text"
-      name="Sex"
-    />
+    <label>Sex / Gender</label>
+<select name="Sex_Gender" required>
+  <option value="">Select</option>
+  <option value="Female">Female</option>
+  <option value="Male">Male</option>
+  <option value="Non-binary">Non-binary</option>
+  <option value="Other (specify)">Other (specify)</option>
+  <option value="Prefer not to answer">Prefer not to answer</option>
+</select>
 
+<label>Other (specify)</label>
+<input
+  type="text"
+  name="Sex_Gender_Other_Specify"
+  placeholder="If selected, please specify"
+/>
     <label>Race / Ethnicity</label>
     <input
       type="text"
