@@ -179,12 +179,25 @@
   name="Sex_Gender_Other_Specify"
   placeholder="If selected, please specify"
 />
-    <label>Race / Ethnicity</label>
-    <input
-      type="text"
-      name="Race_Ethnicity"
-    />
+    <label>Race</label>
+<select name="Race" required>
+  <option value="">Select</option>
+  <option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+  <option value="Asian">Asian</option>
+  <option value="Black or African American">Black or African American</option>
+  <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+  <option value="White">White</option>
+  <option value="Multiracial">Multiracial</option>
+  <option value="Other (specify)">Other (specify)</option>
+  <option value="Prefer not to answer">Prefer not to answer</option>
+</select>
 
+<label>Other (specify)</label>
+<input
+  type="text"
+  name="Race_Other_Specify"
+  placeholder="If selected, please specify"
+/>
     <label>Height (cm)</label>
     <input
       type="number"
