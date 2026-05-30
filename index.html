@@ -209,13 +209,31 @@
           <div><label>Trial 2 (kg)</label><input type="number" name="Handgrip_Trial_2_kg" step="0.01" /></div>
           <div><label>Trial 3 (kg)</label><input type="number" name="Handgrip_Trial_3_kg" step="0.01" /></div>
           <div>
-            <label>Hand Dominance</label>
-            <select name="Hand_Dominance">
-              <option value="">Select</option>
-              <option>Right</option>
-              <option>Left</option>
-            </select>
-          </div>
+  <label>Hand Dominance</label>
+
+  <div style="display:flex; gap:24px; margin-top:10px;">
+    <label style="display:flex; align-items:center; gap:8px; font-weight:600;">
+      <input
+        type="radio"
+        name="Hand_Dominance"
+        value="Right"
+        required
+        style="width:auto;"
+      />
+      Right
+    </label>
+
+    <label style="display:flex; align-items:center; gap:8px; font-weight:600;">
+      <input
+        type="radio"
+        name="Hand_Dominance"
+        value="Left"
+        style="width:auto;"
+      />
+      Left
+    </label>
+  </div>
+</div>
         </div>
       </div>
 
